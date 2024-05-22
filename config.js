@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb://localhost:27017/mydatabase';
+const mongoURI = 'mongodb://flexion:flexion123@153.92.4.234:27017/esandhai_server?authMechanism=DEFAULT&authSource=admin';
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
