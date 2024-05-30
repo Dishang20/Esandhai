@@ -93,7 +93,10 @@ router.post('/signUp-Old', async (req, res, next) => {
         return res.status(500).json({ issuccess: false, data: { acknowledgement: false }, message: error.message || "Having issue is server" })
     }
 })
-router.post('/signUp', [body('email').isEmail().withMessage("please pass email id"), body('password').not().isEmpty().isString().withMessage("please pass password")], checkErr, async (req, res, next) => {
+router.post('/signUp',
+          //  [body('email').isEmail().withMessage("please pass email id"), body('password').not().isEmpty().isString().withMessage("please pass password")],
+            // checkErr,
+            async (req, res, next) => {
     try {
         const { email, password } = req.body;
 
